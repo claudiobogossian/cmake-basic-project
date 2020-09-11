@@ -1,0 +1,21 @@
+include(BundleUtilities)
+
+set(APPS "${CMAKE_INSTALL_PREFIX}/bin/CMakeBasicProjectMain")
+
+set(DIRS "${CMAKE_INSTALL_PREFIX}/lib")
+
+list(APPEND DIRS "/home/bogo/workspace-terraamazon/terralib5-deps/dependencies/lib")
+
+set(LIBS "")
+
+message("CMAKE_INSTALL_PREFIX: ${CMAKE_INSTALL_PREFIX}")
+message("CMAKE_BINARY_DIR: ${CMAKE_BINARY_DIR}")
+message("APPS: ${APPS}")
+message("LIBS: ${LIBS}")
+message("DIRS: ${DIRS}")
+
+message("CPACK_INSTALL_PREFIX: ${CPACK_INSTALL_PREFIX}")
+
+message("CPACK_SOURCE_INSTALLED_DIRECTORIES: ${CPACK_SOURCE_INSTALLED_DIRECTORIES}")
+
+fixup_bundle("${APPS}" "${LIBS}" "${DIRS}")
